@@ -12,6 +12,7 @@ function Main() {
         src="/img/hero-illustration.svg"
         alt="Um desenvolvedor na frente do computador"
       />
+      <a href="#">Link</a>
     </S.Wrapper>
   )
 }

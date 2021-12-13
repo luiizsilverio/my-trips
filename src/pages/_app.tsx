@@ -6,12 +6,23 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>React Avançado</title>
+        <title>My Trips</title>
         <link rel="shortcut icon" href="/img/icon-512.png" />
         <link rel="apple-touch-icon icon" href="/img/icon-512.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossOrigin=""
+        />
+
         <meta
           name="description"
           content="Mapa interativo desenvolvido em React, NextJS, Typescript"
+        />
+        <meta
+          name="theme-color"
+          content="#06092B"
         />
       </Head>
       <GlobalStyle />

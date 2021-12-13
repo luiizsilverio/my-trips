@@ -2,7 +2,14 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --background: #969cb3;
+    --highlight: #e20e8d;
+    --background: #030518;
+    --white: #eeeeee;
+
+    --container: 100rem;
+    --small: 1.5rem;
+    --medium: 3rem;
+    --large: 5rem;
   }
 
   * {
@@ -18,10 +25,20 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: --apple-system, 'Segoe UI', Open-Sans, sans-serif;
     background: var(--background);
+    color: var(--white);
   }
 
   html, body, #__next {
     height: 100%;
+  }
+
+  p, a {
+    font-size: 2rem;
+    line-height: var(--medium);
+  }
+
+  a {
+    color: var(--highlight);
   }
 `
 
