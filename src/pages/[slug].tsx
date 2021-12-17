@@ -6,9 +6,8 @@ import { GET_PAGES, GET_PAGE_BY_SLUG } from "@/graphql/queries";
 import MyPagesTemplate, { PageProps } from "@/templates/MyPages";
 
 function Page({ heading, body }: PageProps) {
-  const router = useRouter()
-
-  if (router.isFallback) return null
+  // const router = useRouter()
+  // if (router.isFallback) return null
 
   return <MyPagesTemplate heading={heading} body={body} />
 }
@@ -44,6 +43,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       heading: page.heading,
       body: page.body.html
     },
-    revalidate: 60 * 60 * 8
+    revalidate: 60 * 60
   }
 }
