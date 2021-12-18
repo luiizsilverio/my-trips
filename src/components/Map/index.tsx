@@ -16,6 +16,25 @@ export type MapProps = {
   places?: Place[]
 }
 
+const MAPBOX_API_KEY = process.env.NEXT_PUBLIC_MAPBOX_API_KEY
+const MAPBOX_USERID  = process.env.NEXT_PUBLIC_MAPBOX_USER_ID
+const MAPBOX_STYLEID = process.env.NEXT_PUBLIC_MAPBOX_STYLE_ID
+
+const CustomTileLayer = () => {
+  return MAPBOX_API_KEY ? (
+    <TileLayer
+      attribution='© <a href="https://apps.mapbox.com/feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      url={`https://api.mapbox.com/styles/v1/${MAPBOX_USERID}/${MAPBOX_STYLEID}/tiles/256/{z}/{x}/{y}@2x?access_token=${MAPBOX_API_KEY}`}
+    />
+    )
+    : (
+      <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+    )
+}
+
 const Map = ({ places }: MapProps) => {
   // const position: LatLngExpression = [0, 0]
   const router = useRouter()
@@ -27,10 +46,8 @@ const Map = ({ places }: MapProps) => {
       scrollWheelZoom={true}
       style={{height: '100%', width: '100%'}}
     >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
+
+      <CustomTileLayer />
 
       {
         places?.map(({ id, slug, name, location }) => {

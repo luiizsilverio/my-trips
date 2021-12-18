@@ -1,12 +1,17 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import NextNprogress from 'nextjs-progressbar'
+
+import { DefaultSeo } from 'next-seo'
+import SEO from '../../next-seo.config'
+
 import GlobalStyle from '../styles/global'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>My Trips</title>
+        {/* <title>My Trips</title> */}
         <link rel="shortcut icon" href="/img/icon-512.png" />
         <link rel="apple-touch-icon icon" href="/img/icon-512.png" />
         <link rel="manifest" href="/manifest.json" />
@@ -16,16 +21,27 @@ function MyApp({ Component, pageProps }: AppProps) {
           crossOrigin=""
         />
 
-        <meta
+        {/* <meta
           name="description"
           content="Mapa interativo desenvolvido em React, NextJS, Typescript"
-        />
+        /> */}
         <meta
           name="theme-color"
           content="#06092B"
         />
       </Head>
+
+      <DefaultSeo {...SEO} />
+
       <GlobalStyle />
+
+      <NextNprogress
+        color="#29D"
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={3}
+      />
+
       <Component {...pageProps} />
     </>
   )
