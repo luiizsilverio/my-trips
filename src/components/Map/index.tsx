@@ -1,11 +1,14 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import { LatLngExpression } from 'leaflet'
+import { MapContainer, TileLayer, Marker } from 'react-leaflet'
 import { useRouter } from 'next/router'
+import L from 'leaflet'
+
+import * as S from './styles'
 
 type Place = {
   id: string
   name: string
   slug: string
+  visited: boolean
   location: {
     latitude: number
     longitude: number
@@ -39,38 +42,58 @@ const Map = ({ places }: MapProps) => {
   // const position: LatLngExpression = [0, 0]
   const router = useRouter()
 
+  const markerIconVisited = new L.Icon({
+    iconUrl: 'img/marker-icon-red.png',
+    iconSize: [25, 41],
+    iconAnchor: [0, 41],
+    popupAnchor: [0, -41]
+  })
+
+  const markerIcon = new L.Icon({
+    iconUrl: 'img/marker-icon-green.png',
+    iconSize: [25, 41],
+    iconAnchor: [0, 41],
+    popupAnchor: [0, -41]
+  })
+
   return (
-    <MapContainer
-      center={[0, 0]}
-      zoom={ 3 }
-      scrollWheelZoom={true}
-      style={{height: '100%', width: '100%'}}
-    >
+    <S.MapWrapper>
+      <MapContainer
+        center={[0, 0]}
+        zoom={ 3 }
+        minZoom={ 3 }
+        maxBounds={[
+          [-180, 180],
+          [180, -180]
+        ]}
+        scrollWheelZoom={true}
+        style={{height: '100%', width: '100%'}}
+      >
 
-      <CustomTileLayer />
+        <CustomTileLayer />
 
-      {
-        places?.map(({ id, slug, name, location }) => {
-          const { latitude, longitude } = location
+        {
+          places?.map(({ id, slug, name, location, visited }) => {
+            const { latitude, longitude } = location
 
-          return (
-            <Marker
-              key={ id }
-              position={[latitude, longitude]}
-              title={ name }
+            return (
+              <Marker
+                key={ id }
+                position={[latitude, longitude]}
+                title={ name }
+                icon={ visited ? markerIconVisited : markerIcon }
+                eventHandlers={{
+                  click: () => {
+                    router.push(`/place/${ slug }`)
+                  }
+                }}
 
-              eventHandlers={{
-                click: () => {
-                  router.push(`/place/${ slug }`)
-                }
-              }}
-
-            />
-          )
-        })
-      }
-
-    </MapContainer>
+              />
+            )
+          })
+        }
+      </MapContainer>
+    </S.MapWrapper>
   )
 }
 

@@ -16,6 +16,7 @@ describe('<Map />', () => {
       id: '1',
       name: 'Petrópolis',
       slug: 'petropolis',
+      visited: false,
       location: {
         latitude: 0,
         longitude: 0

@@ -12,6 +12,7 @@ const places = [
     id: '1',
     name: 'Londres',
     slug: 'londres',
+    visited: false,
     location: {
       latitude: 52,
       longitude: 0
@@ -21,6 +22,7 @@ const places = [
     id: '2',
     name: 'Campinas',
     slug: 'campinas',
+    visited: true,
     location: {
       latitude: -25,
       longitude: -50
