@@ -58,6 +58,7 @@ const Map = ({ places }: MapProps) => {
               key={ id }
               position={[latitude, longitude]}
               title={ name }
+
               eventHandlers={{
                 click: () => {
                   router.push(`/place/${ slug }`)
