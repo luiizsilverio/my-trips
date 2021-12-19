@@ -1,34 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/luiizsilverio/moveit-next/blob/main/public/logo-full.svg" />
+    </td>
+    <td><h1>AppFinances</h1></td>
+  </tr>
+</table>
 
-## Getting Started
+## Conteúdo
+* [Sobre o Projeto](#sobre-o-projeto)
+* [Tecnologias](#hammer_and_wrench-tecnologias)
+* [Screenshots](#camera_flash-screenshots)
+* [Iniciando o Projeto](#car-Iniciando-o-projeto)
+* [Licença](#balance_scale-licença)
+* [Contato](#email-contato)
 
-First, run the development server:
+## Sobre o projeto
+Aplicativo de incentivo à prática de exercícios.<br/>
+Ele gerencia o tempo, utilizando o método pomodoro, dividindo o trabalho em períodos de 25 minutos.<br/>
+Ao término de cada período, o aplicativo sugere um exercíco.<br/>
+Conforme vai fazendo os exercícios, vai ganhando pontos.
 
+## :hammer_and_wrench: Tecnologias
+* <ins>React</ins>
+* <ins>NextJs</ins>
+* <ins>Typescript</ins>
+* <ins>Cookies</ins>
+
+## :camera_flash: Screenshots
+![](https://github.com/luiizsilverio/moveit-next/blob/main/public/screenshots/moveit.gif)
+
+## :car: Iniciando o projeto
 ```bash
-npm run dev
-# or
-yarn dev
+# Baixe o repositório com git clone e entre na pasta do projeto.
+$ git clone https://github.com/luiizsilverio/moveit-next.git
+
+# Execute yarn para instalar as dependências (ou npm install)
+$ yarn
+
+# O intervalo de tempo padrão é 25 minutos. Para diminuir o tempo, 
+# Altere a variável global NEXT_PUBLIC_INTERVALO_TEMPO no arquivo .env.
+
+# Para iniciar a aplicação
+$ yarn start
+
+# Abra http://localhost:3000 no navegador
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## :balance_scale: Licença
+Este projeto está licenciado sob a [licença MIT](LICENSE).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## :email: Contato
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+E-mail: [**luiiz.silverio@gmail.com**](mailto:luiiz.silverio@gmail.com)

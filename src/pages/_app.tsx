@@ -12,8 +12,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         {/* <title>My Trips</title> */}
-        <link rel="shortcut icon" href="/img/icon-512.png" />
-        <link rel="apple-touch-icon icon" href="/img/icon-512.png" />
+        <link rel="shortcut icon" href="/img/map-icon.png" />
+        <link rel="apple-touch-icon icon" href="/img/map-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="stylesheet"
           href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
