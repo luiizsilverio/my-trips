@@ -16,8 +16,8 @@
 * [Contato](#email-contato)
 
 ## Sobre o projeto
-Aplicativo desenvolvido em React/Next com Typescript que mostra o mapa-mundi com marcadores indicando todos os lugares que eu visitei (marcador vermelho) ou desejo conhecer (marcador verde).<br/>
-Ao clicar nos marcadores, abre uma tela com informações sobre o lugar, com texto e fotos.<br/>
+Aplicação desenvolvida em React/Next com Typescript que mostra o mapa-mundi com marcadores que indicam todos os lugares que eu visitei (marcador vermelho) ou desejo visitar (marcador verde).<br/>
+Ao clicar nos marcadores, mostra uma tela com informações sobre o lugar, com texto e fotos.<br/>
 Os dados estão armazenados no GraphCMS e são acessados por meio de uma API GraphQL.<br/>
 Utiliza recursos de páginas dinâmicas e páginas estáticas.<br/>
 A aplicação pode ser acessada [aqui](https://my-trips-seven-wine.vercel.app).<br/>
@@ -26,10 +26,9 @@ A aplicação pode ser acessada [aqui](https://my-trips-seven-wine.vercel.app).<
 * <ins>React</ins>
 * <ins>NextJs</ins>
 * <ins>Typescript</ins>
-* Mapa <ins>Leaflet / MapBox</ins>
-* Estilização com <ins>Styled-Components</ins>
+* Mapa <ins>Leaflet</ins> / <ins>MapBox</ins>
+* Estilos com <ins>Styled-Components</ins>
 * Banco de dados armazenado no CMS <ins>GraphCMS</ins>
-* Acesso a API GraphQL
 
 ## :camera_flash: Screenshots
 ![](https://github.com/luiizsilverio/my-trips/blob/main/public/img/cover.png)
