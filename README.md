@@ -16,7 +16,7 @@
 * [Contato](#email-contato)
 
 ## Sobre o projeto
-Aplicação desenvolvida em React/Next com Typescript, durante o curso [Aprenda NextJS, GraphQL/GraphCMS e Leaflet na prática!](https://www.udemy.com/course/aprenda-nextjs-na-pratica/), do professor _William Justen__. Ele mostra o mapa-mundi com marcadores que indicam todos os lugares que eu visitei (marcador vermelho) ou desejo visitar (marcador verde).<br/>
+Aplicação desenvolvida em React/Next com Typescript, durante o curso [Aprenda NextJS, GraphQL/GraphCMS e Leaflet na prática!](https://www.udemy.com/course/aprenda-nextjs-na-pratica/), do professor _William Justen_. Ele mostra o mapa-mundi com marcadores que indicam todos os lugares que eu visitei (marcador vermelho) ou desejo visitar (marcador verde).<br/>
 Ao clicar nos marcadores, mostra uma tela com informações sobre o lugar, com texto e fotos.<br/>
 Os dados estão armazenados no GraphCMS e são acessados por meio de uma API GraphQL.<br/>
 Utiliza recursos de páginas dinâmicas e páginas estáticas.<br/>
